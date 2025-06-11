@@ -18,7 +18,6 @@
         android:layout_gravity="center_horizontal"
         />
 
-    <!-- Me quede en ell Minutoo 45:47 del video...-->
     <EditText
         android:id="@+id/name_input"
         android:layout_width="match_parent"

@@ -36,8 +36,6 @@
         android:paddingHorizontal="50dp"
         >
 
-        <!--Me quede en el minuto 1:03:20 del video hasta aquii -->
-
         <Button
             android:id="@+id/button_cold_drinks"
             android:text="@string/cold_drinks"
