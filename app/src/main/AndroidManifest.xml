@@ -13,6 +13,10 @@
         android:theme="@style/Theme.TheCheezery_NeriSaul"
         tools:targetApi="31">
         <activity
+            android:name=".MenuActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TheCheezery_NeriSaul" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -21,10 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".UserRegistryActivity">
-
-        </activity>
+        <activity android:name=".UserRegistryActivity"></activity>
     </application>
 
 </manifest>

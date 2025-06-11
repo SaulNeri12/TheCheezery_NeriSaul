@@ -60,6 +60,8 @@
         android:layout_height="48dp"
         android:text="I have read and accepted terms and conditions of The Cheezery"
         android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif"
+        android:textAlignment="center"
         android:textStyle="italic"/>
 
     <Button
