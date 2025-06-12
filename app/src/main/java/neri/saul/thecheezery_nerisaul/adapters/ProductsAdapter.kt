@@ -9,22 +9,23 @@ import android.widget.ImageView
 import android.widget.TextView
 import neri.saul.thecheezery_nerisaul.Product
 import neri.saul.thecheezery_nerisaul.R
+import org.w3c.dom.Text
 
 class ProductsAdapter : BaseAdapter {
-    private var products: ArrayList<Product> = ArrayList()
+    private var products: ArrayList<Product>? = ArrayList()
     private var context: Context? = null
 
-    constructor(context: Context, products: ArrayList<Product>) {
+    constructor(context: Context, products: ArrayList<Product>?) {
         this.context = context
         this.products = products
     }
 
     override fun getCount(): Int {
-        return this.products.size
+        return this.products?.size ?: -1
     }
 
-    override fun getItem(position: Int): Any {
-        return this.products.get(position)
+    override fun getItem(position: Int): Product? {
+        return this.products?.get(position)
     }
 
     override fun getItemId(position: Int): Long {
@@ -32,7 +33,7 @@ class ProductsAdapter : BaseAdapter {
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val product: Product = this.products.get(position)
+        val product: Product? = this.products?.get(position)
         val inflator: LayoutInflater = LayoutInflater.from(this.context)
         val view = inflator.inflate(R.layout.product_view, null)
 
@@ -41,10 +42,10 @@ class ProductsAdapter : BaseAdapter {
         val description: TextView = view.findViewById(R.id.product_description) as TextView
         val price: TextView = view.findViewById(R.id.product_price) as TextView
 
-        image.setImageResource(product.image)
-        name.setText(product.name)
-        description.setText(product.description)
-        price.setText("$${product.price}")
+        image.setImageResource(product?.image ?: R.drawable.caramel_frap)
+        name.setText(product?.name)
+        description.setText(product?.description)
+        price.setText("$${product?.price}")
 
         return view
     }
