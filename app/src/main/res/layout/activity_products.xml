@@ -14,9 +14,10 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:gravity="center"
-        android:textSize="30sp"
+        android:textSize="35sp"
         android:fontFamily="sans-serif-condensed"
-        android:text="sheeesh"
+        android:paddingVertical="20dp"
+        android:text="TITLE"
         />
 
     <ListView
