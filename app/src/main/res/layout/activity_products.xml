@@ -8,25 +8,25 @@
     android:id="@+id/main"
     tools:context=".ProductsActivity">
 
-    <TextView
-        android:id="@+id/products_list_header"
+    <ImageView
+        android:id="@+id/category"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:gravity="center"
-        android:textSize="35sp"
-        android:fontFamily="sans-serif-condensed"
-        android:paddingVertical="20dp"
-        android:text="TITLE"
+        android:src="@drawable/cold_drinks"
+        android:paddingTop="20dp"
         />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/very_purple"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="16dp"/>
 
     <ListView
         android:id="@+id/products_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-
-
-
-
 
 </LinearLayout>
