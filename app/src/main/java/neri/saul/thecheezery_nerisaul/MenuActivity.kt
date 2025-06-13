@@ -31,28 +31,28 @@ class MenuActivity :  AppCompatActivity() {
 
         coldDrinksBtn.setOnClickListener {
             val intent = Intent(this, ProductsActivity::class.java)
-            intent.putExtra("products_list_name", "Cold Drinks");
+            intent.putExtra("products_category", R.drawable.cold_drinks);
             intent.putExtra("products_list", this.coldDrinks)
             startActivity(intent)
         }
 
         hotDrinksBtn.setOnClickListener {
             val intent = Intent(this, ProductsActivity::class.java)
-            intent.putExtra("products_list_name", "Hot Drinks");
+            intent.putExtra("products_category", R.drawable.hot_drinks);
             intent.putExtra("products_list", this.hotDrinks)
             startActivity(intent)
         }
 
         sweetsBtn.setOnClickListener {
             val intent = Intent(this, ProductsActivity::class.java)
-            intent.putExtra("products_list_name", "Sweets");
+            intent.putExtra("products_category", R.drawable.sweets);
             intent.putExtra("products_list", this.sweets)
             startActivity(intent)
         }
 
         saltiesBtn.setOnClickListener {
             val intent = Intent(this, ProductsActivity::class.java)
-            intent.putExtra("products_list_name", "Salties");
+            intent.putExtra("products_category", R.drawable.salties);
             intent.putExtra("products_list", this.salties)
             startActivity(intent)
         }
